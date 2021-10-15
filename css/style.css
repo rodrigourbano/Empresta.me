@@ -1,0 +1,123 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+.green-btn {
+  width: 218px;
+  height: 52px;
+  background-color: #7cdc54;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.25em;
+}
+
+.purple-btn {
+  width: 218px;
+  height: 52px;
+  background-color: #b454dc;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.25em;
+  float: right;
+}
+
+.green-div {
+  width: 100%;
+  height: 652px;
+  left: 0px;
+  top: 86px;
+  background: #7cdc54;
+}
+
+.img-people {
+  width: 611px;
+  height: 457px;
+  margin-top: 100px;
+  margin-left: 150px;
+  float: left;
+  display: flex;
+}
+
+.title-green {
+  width: 530.18px;
+  height: 55px;
+
+  font-family: Ubuntu;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 55px;
+  text-align: right;
+}
+
+.text-green {
+  width: 530.18px;
+  height: 157px;
+
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: right;
+}
+
+.main-text {
+  display: block;
+  float: right;
+  margin: 100px 150px 100px 100px;
+}
+
+.tech-text {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 55px;
+  text-align: center;
+}
+
+.coluna {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.coluna img {
+  display: block;
+  margin: auto;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.img-author {
+  width: 262px;
+  height: 438px;
+  border-radius: 50px;
+  margin-top: 100px;
+  margin-left: 350px;
+  float: left;
+  display: flex;
+}
+
+.text-about {
+  width: 570px;
+  height: 463px;
+
+  font-family: Ubuntu;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 41px;
+}
+
+.light-green-div {
+  width: 100%;
+  height: 652px;
+  left: 0px;
+  top: 86px;
+  background: #a9e690;
+}
