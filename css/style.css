@@ -11,7 +11,16 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.25em;
 }
-
+.green-outline-btn {
+  width: 218px;
+  height: 52px;
+  background-color: #212529;
+  border-color: #7cdc54;
+  border-color: 1.5rem;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.25em;
+  color: #7cdc54;
+}
 .purple-btn {
   width: 218px;
   height: 52px;
@@ -120,4 +129,26 @@ body {
   left: 0px;
   top: 86px;
   background: #a9e690;
+}
+
+.login-background {
+  background-color: #d7d7d7;
+  width: 100%;
+  height: 100%;
+}
+
+.gradient-custom {
+  background: #6a11cb;
+
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(124, 220, 84, 1),
+    rgba(180, 84, 220, 1)
+  );
+
+  background: linear-gradient(
+    to right,
+    rgba(124, 220, 84, 1),
+    rgba(180, 84, 220, 1)
+  );
 }
