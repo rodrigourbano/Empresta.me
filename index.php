@@ -36,7 +36,7 @@
         type="button"
         class="btn green-outline-btn float-end"
         style="margin-right: 20px"
-        onclick="location.href='login.html'"
+        onclick="location.href='login.php'"
       >
         Login
       </button>

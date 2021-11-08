@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -36,7 +36,7 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item text-white">
-          <a class="nav-link">Dashboard</a>
+          <a class="nav-link" href="./dash.php">Dashboard</a>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -52,17 +52,17 @@
           <!-- Dropdown menu -->
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
-              <a class="dropdown-item" href="#"
+              <a class="dropdown-item" href="./cadastroItem.php"
                 ><i class="fas fa-boxes"></i> Items</a
               >
             </li>
             <li>
-              <a class="dropdown-item" href="#"
-                ><i class="fas fa-user-astronaut"></i> Usuários</a
+              <a class="dropdown-item" href="./cadastroUsers.php"
+                ><i class="fas fa-user-astronaut"></i> Pessoas</a
               >
             </li>
             <li>
-              <a class="dropdown-item" href="#"
+              <a class="dropdown-item" href="./cadastroEmprestimo.php"
                 ><i class="fas fa-people-carry"></i> Empréstimos</a
               >
             </li>
