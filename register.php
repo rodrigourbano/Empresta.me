@@ -69,15 +69,15 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-6 mb-4 d-flex align-items-center">
+                    <div class="col-md-12 mb-4 d-flex align-items-center">
                       <div class="form-outline datepicker w-100">
                         <input
-                          type="date"
+                          type="password"
                           class="form-control form-control-lg"
-                          id="birthdayDate"
+                          id="password"
                         />
                         <label for="birthdayDate" class="form-label"
-                          >Data de Nascimento</label
+                          >Senha</label
                         >
                       </div>
                     </div>
