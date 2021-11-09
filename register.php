@@ -15,6 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,300;1,700&display=swap"
       rel="stylesheet"
     />
+    
+    <?php
+      include('libs/start.php');
+    ?>
+    
     <title>Cadastrar</title>
   </head>
   <body>

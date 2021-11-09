@@ -16,6 +16,10 @@
       rel="stylesheet"
     />
 
+    <?php
+      include('libs/start.php');
+    ?>
+
     <title>Login</title>
   </head>
   <body>

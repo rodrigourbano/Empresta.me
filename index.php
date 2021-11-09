@@ -19,7 +19,9 @@
       src="https://kit.fontawesome.com/d188baf7ab.js"
       crossorigin="anonymous"
     ></script>
-
+    <?php
+      include('libs/start.php');
+    ?>
     <title>Empresta.Me</title>
   </head>
   <body>
