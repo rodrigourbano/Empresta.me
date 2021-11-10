@@ -29,70 +29,39 @@
           <div class="col-12 col-lg-9 col-xl-7">
               <div class="card-body bg-dark p-4 p-md-5" style="border-radius: 1rem">
                 <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Cadastro</h3>
-                <form>
+                <form action="register-send.php" method="post">
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input
-                          type="text"
-                          id="firstName"
-                          class="form-control form-control-lg"
-                          placeholder="Michael"
-                        />
-                        <label class="form-label" for="firstName"
-                          >Primeiro Nome</label
-                        >
+                        <input type="text" id="firstName" class="form-control form-control-lg" placeholder="Michael" name="firstName" />
+                        <label class="form-label" for="firstName">Primeiro Nome</label>
                       </div>
                     </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input
-                          type="text"
-                          id="lastName"
-                          class="form-control form-control-lg"
-                          placeholder="Scott"
-                        />
-                        <label class="form-label" for="lastName"
-                          >Sobrenome</label
-                        >
+                        <input type="text" id="lastName" class="form-control form-control-lg" placeholder="Scott" name="lastName"/>
+                        <label class="form-label" for="lastName">Sobrenome</label>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 mb-4 pb-2">
                       <div class="form-outline">
-                        <input
-                          type="email"
-                          id="emailAddress"
-                          class="form-control form-control-lg"
-                          placeholder="worldsbestboss@dundermifflin.com"
-                        />
-                        <label class="form-label" for="emailAddress"
-                          >Email</label
-                        >
+                        <input type="email" id="emailAddress" class="form-control form-control-lg" name="email" placeholder="worldsbestboss@dundermifflin.com"/>
+                        <label class="form-label" for="emailAddress">Email</label>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 mb-4 d-flex align-items-center">
                       <div class="form-outline datepicker w-100">
-                        <input
-                          type="password"
-                          class="form-control form-control-lg"
-                          id="password"
-                        />
-                        <label for="birthdayDate" class="form-label"
-                          >Senha</label
-                        >
+                        <input type="password" class="form-control form-control-lg" id="password" name="password"/>
+                        <label for="birthdayDate" class="form-label">Senha</label>
                       </div>
                     </div>
                   </div>
                   <div class="mt-4 pt-2">
-                    <input
-                      class="btn btn-outline-light btn-lg px-5"
-                      type="submit"
-                      value="Submit"
-                    />
+                    <button class="btn btn-outline-light btn-lg px-5" type="submit" name="submit">Registrar!</button>
                   </div>
                 </form>
               </div>
