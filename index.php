@@ -55,7 +55,7 @@
           type="button"
           class="btn purple-btn"
           style="margin-right: 20px"
-          onclick="location.href='register.html'"
+          onclick="location.href='register.php'"
         >
           Cadastrar
         </button>

@@ -86,7 +86,7 @@
                 <div>
                   <p class="mb-0">
                     Ainda não tem uma conta?
-                    <a href="#!" class="text-white-50 fw-bold">Cadastre-se</a>
+                    <a href="register.php" class="text-white-50 fw-bold">Cadastre-se</a>
                   </p>
                 </div>
               </div>
