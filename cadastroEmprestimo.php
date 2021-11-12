@@ -2,7 +2,7 @@
   <?php 
     include('includes/navbar.php');
     ?>
-    <div class="cadastro-div-lg text-white">
+    <div class="cadastro-div-lg text-white" style="height: 658px !important">
       <span>⠀</span>
       <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 texto-cadastro">
         Cadastrar Empréstimo
@@ -21,13 +21,29 @@
               />
               <label class="form-label" for="objeto">Item</label>
               <!--Inserir foreach para fazer um input de select-->
-              <input
+            <!--  <select class='form-select form-select-lg mb-3'> -->
+
+              <?php 
+              $item = $database->select("item", "*");
+              if(count($item) == 0) { ?>
+                  <select class='form-select form-select-lg mb-3' name="objeto" disabled>
+                  <option selected>Cadastre os objetos no menu de Cadastro de itens</option>
+              <?php
+              } else { ?>
+                <select class='form-select form-select-lg mb-3' name="objeto">
+             <?php foreach ($item as $i) { ?>
+                <option value="<?=$i['item']?>"><?=$i['item']?></option> 
+             <?php }
+              }             
+            ?>
+            </select>
+              <!--<input
                 type="text"
                 id="objeto"
                 name="objeto"
                 class="form-control form-control-lg"
                 placeholder="Caneta"
-              />
+              />-->
               <label class="form-label" for="dataMax">Data Máxima</label>
               <input
                 type="date"

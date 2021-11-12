@@ -59,11 +59,11 @@
                 ><i class="fas fa-boxes"></i> Items</a
               >
             </li>
-            <li>
+            <!--<li>
               <a class="dropdown-item" href="./cadastroUsers.php"
                 ><i class="fas fa-user-astronaut"></i> Pessoas</a
               >
-            </li>
+            </li>-->
             <li>
               <a class="dropdown-item" href="./cadastroEmprestimo.php"
                 ><i class="fas fa-people-carry"></i> Empréstimos</a
@@ -71,9 +71,29 @@
             </li>
           </ul>
         </li>
-
         <li class="nav-item text-white">
           <a class="nav-link" href="#">Relatórios</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Configurações
+          </a>
+          <!-- Dropdown menu -->
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="#"><i class="fas fa-user-cog"></i> Editar Perfil</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </nav>
