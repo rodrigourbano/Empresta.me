@@ -7,14 +7,15 @@
       <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 texto-cadastro">
         Cadastrar Empréstimo
       </h3>
-      <form>
+      <form action="cadastroEmprestimo-Enviar.php" method="post">
         <div class="row" style="margin-left: 10px; margin-right: 10px">
           <div class="col-md-12 mb-4">
             <div class="form-outline">
-              <label class="form-label" for="objeto">Usuário</label>
+              <label class="form-label" for="objeto">Emprestar para:</label>
               <input
                 type="text"
-                id="objeto"
+                id="recebedor"
+                name="recebedor"
                 class="form-control form-control-lg"
                 placeholder="Jim Halpert"
               />
@@ -23,6 +24,7 @@
               <input
                 type="text"
                 id="objeto"
+                name="objeto"
                 class="form-control form-control-lg"
                 placeholder="Caneta"
               />
@@ -30,6 +32,7 @@
               <input
                 type="date"
                 id="dataMax"
+                name="dataMax"
                 class="form-control form-control-lg"
               />
               <h4 class="texto-cadastro">Contato</h4>
@@ -37,6 +40,7 @@
               <input
                 type="text"
                 id="email"
+                name="email"
                 class="form-control form-control-lg"
                 placeholder="dwightschrute@dundermifflin.com"
               />
@@ -44,11 +48,12 @@
               <input
                 type="text"
                 id="telefone"
+                name="telefone"
                 class="form-control form-control-lg"
-                placeholder="dwightschrute@dundermifflin.com"
+                placeholder="(xx) 9xxxx-xxxx"
               />
               <div class="text-center" style="margin-top: 10px">
-                 <button type="button" class="btn green-outline-btn center">Emprestar!</button>
+                 <button type="submit" name="submit" class="btn green-outline-btn center">Emprestar!</button>
               </div>  
             </div>
           </div>

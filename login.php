@@ -1,3 +1,34 @@
+<?php 
+include('libs/start.php');
+
+
+if (isset($_POST['email']) || isset($_POST['password'])) {
+
+    
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $query = $database->select("users", "*", ["email" => $email, "senha" => $password]);
+
+    if(count($query) == 1) {
+
+      if(!isset($_SESSION)) {
+        session_start();
+      }
+
+      $_SESSION['id'] = $query['id'];
+      $_SESSION['nome'] = $query['primeiroNome'];
+
+      header("Location: dash.php");
+    } else {
+      echo "<div class='alert alert-danger' style='margin-bottom: 0px; font-size: 1.5em'>Falha ao logar! Email ou senha incorretos!</div>";
+    }
+
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,10 +47,6 @@
       rel="stylesheet"
     />
 
-    <?php
-      include('libs/start.php');
-    ?>
-
     <title>Login</title>
   </head>
   <body>
@@ -34,13 +61,15 @@
                   <p class="text-white-50 mb-5">
                     Realize o login para utilizar nossa plataforma!
                   </p>
-                  <form>
+                  <form action="" method="POST">
                     <div class="form-outline form-white mb-4">
                       <input
                         type="email"
-                        id="typeEmailX"
+                        id="email"
+                        name="email"
                         class="form-control form-control-lg"
                         placeholder="Email"
+                        required
                       />
                       <label class="form-label" for="typeEmailX">Email</label>
                     </div>
@@ -48,25 +77,23 @@
                     <div class="form-outline form-white mb-4">
                       <input
                         type="password"
-                        id="typePasswordX"
+                        id="password"
+                        name="password"
                         class="form-control form-control-lg"
                         placeholder="Senha"
+                        required
                       />
-                      <label class="form-label" for="typePasswordX"
+                      <label class="form-label" for="password"
                         >Senha</label
                       >
                     </div>
+                    <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
                   </form>
-                  <p class="small mb-5 pb-lg-2">
+                  <p class="small mb-5 pb-lg-2" style="margin-top: 20px">
                     <a class="text-white-50" href="#!">Esqueceu a senha?</a>
                   </p>
 
-                  <button
-                    class="btn btn-outline-light btn-lg px-5"
-                    type="submit"
-                  >
-                    Login
-                  </button>
+
 
                   <div
                     class="d-flex justify-content-center text-center mt-4 pt-1"
