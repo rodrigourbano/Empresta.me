@@ -3,15 +3,15 @@ include('includes/verificaLogado.php');
 include('libs/start.php');
 include('includes/navbar.php');
 $dataAtual = date("Y-m-d");
-$lista = $database->select("emprestimos", "*");
+$lista = $database->select("emprestimos", "*",["status" => 0]);
 ?>
+
 <div style="background-color: #EAEAEA; height: 1920px; margin-top: 0px;">
 <span>⠀</span>
-<h1 style="text-align: center; margin-bottom: 50px;">Lista de Empréstimos</h1>
+<h1 style="text-align: center; margin-bottom: 50px;">Lista de Empréstimos Pendentes</h1>
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <button class="btn btn-dark btn-lg text-center" style="margin-bottom: 30px;" onclick="location.href='cadastroEmprestimo.php'">Cadastrar Emprestimos</button>
                 <button class="btn btn-dark btn-lg text-center" style="margin-bottom: 30px; margin-left: 10px" onclick="gerarCSV('emprestimos');">Gerar CSV</button>
             </div>
         </div>
