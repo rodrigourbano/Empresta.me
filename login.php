@@ -1,7 +1,6 @@
 <?php 
 include('libs/start.php');
-
-
+session_start();
 if (isset($_POST['email']) || isset($_POST['password'])) {
 
     
@@ -12,14 +11,10 @@ if (isset($_POST['email']) || isset($_POST['password'])) {
 
     if(count($query) == 1) {
 
-      if(!isset($_SESSION)) {
-        session_start();
-      }
+      $_SESSION['uid'] = $query[0]['id'];
+      $_SESSION['nome'] = $query[0]['primeiroNome'];
 
-      $_SESSION['id'] = $query['id'];
-      $_SESSION['nome'] = $query['primeiroNome'];
-
-      header("Location: dash.php");
+      header("Location: dash.php"); 
     } else {
       echo "<div class='alert alert-danger' style='margin-bottom: 0px; font-size: 1.5em'>Falha ao logar! Email ou senha incorretos!</div>";
     }

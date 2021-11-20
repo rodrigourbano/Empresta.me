@@ -71,9 +71,6 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item text-white">
-          <a class="nav-link" href="#">Relatórios</a>
-        </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -88,12 +85,15 @@
           <!-- Dropdown menu -->
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
-              <a class="dropdown-item" href="#"><i class="fas fa-user-cog"></i> Editar Perfil</a>
+              <a class="dropdown-item" href="./configUsuario.php"><i class="fas fa-user-cog"></i> Editar Perfil</a>
             </li>
             <li>
               <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair</a>
             </li>
           </ul>
+        </li>
+        <li class="nav-item text-white">
+          <a class="nav-link" href="#">Relatórios</a>
         </li>
       </ul>
     </nav>
