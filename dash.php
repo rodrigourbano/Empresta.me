@@ -3,11 +3,11 @@ include('includes/verificaLogado.php');
 include('libs/start.php');
 include('includes/navbar.php');
 $dataAtual = date("Y-m-d");
-$lista = $database->select("emprestimos", "*");
+$lista = $database->select("emprestimos", "*", ["status" => 0]);
 ?>
 <div style="background-color: #EAEAEA; height: 1920px; margin-top: 0px;">
 <span>⠀</span>
-<h1 style="text-align: center; margin-bottom: 50px;">Lista de Empréstimos</h1>
+<h1 style="text-align: center; margin-bottom: 50px;">Lista de Empréstimos Pendentes</h1>
     <div class="container">
         <div class="row">
             <div class="col text-center">
@@ -21,7 +21,7 @@ $lista = $database->select("emprestimos", "*");
             <thead>
                 <tr>
                     <th scope="col">Item emprestado</th>
-                    <th scope="col">Emprestado</th>
+                    <th scope="col">Quem pegou</th>
                     <th scope="col">Data Limite</th>
                     <th scope="col">Ações</th>
                 </tr>
@@ -33,9 +33,16 @@ $lista = $database->select("emprestimos", "*");
                     <th scope="row"><?=$l["objeto"]?></th>
                     <td><?=$l["nomeRecebe"]?></td>
                     <td><?=$l["dataLimite"]?></td>
-                    <td><a href="#" title="Fechar emprestimo" style="color: #FFFFFF; text-decoration: none !important;"><i class="far fa-check-circle">⠀</i></a>
-                        <a href="#" title="Deletar emprestimo" style="color: #FFFFFF; text-decoration: none !important;"><i class="far fa-times-circle">⠀</i></a>
-                        <a href="#" title="Editar emprestimo" style="color: #FFFFFF; text-decoration: none !important;"><i class="far fa-edit"></i></a>
+                    <td><a href="./finalizarEmprestimo.php?id=<?php echo $l['id']; ?>" title="Finalizar emprestimo" style="color: #FFFFFF; text-decoration: none !important;"><i class="far fa-check-circle">⠀</i></a>
+                        <a href="./deletarEmprestimo.php?id=<?php echo $l['id']; ?>" title="Deletar emprestimo" style="color: #FFFFFF; text-decoration: none !important;"><i class="far fa-times-circle">⠀</i></a>
+                        <a href="./editarEmprestimo.php?id=<?php echo $l['id']; ?>" title="Editar emprestimo" style="color: #FFFFFF; text-decoration: none !important;"><i class="far fa-edit"></i></a>
+                        <?php 
+                        
+                        if ($dataAtual > $l["dataLimite"]) {
+                            ?>
+                            <span id="piscar" style="color: red;">⠀<i class="fas fa-exclamation-triangle"></i></span> <?php
+                        }
+                        ?>
                     </td>
                 </tr>
             <?php } ?>
@@ -69,3 +76,51 @@ $lista = $database->select("emprestimos", "*");
     document.body.removeChild(link);
 }
 </script>
+<script>
+    var blink_speed = 500; // every 1000 == 1 second, adjust to suit
+    var t = setInterval(function () {
+        var ele = document.getElementById('piscar');
+        ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden');
+    }, blink_speed);    
+</script>
+<?php 
+
+if (isset($_SESSION['fnStatus'])) {
+    ?>
+    <script>
+        Swal.fire({
+        title: 'Emprestimo finalizdo!',
+        text: 'Emprestimo finalizado com sucesso, para conferi-lo vá em Relatórios',
+        icon: 'success',
+        confirmButtonText: 'Beleza!'
+        })
+    </script> <?php
+    unset($_SESSION['fnStatus']);
+}
+
+if (isset($_SESSION['delStatus'])) {
+    ?>
+    <script>
+        Swal.fire({
+        title: 'Emprestimo deletado!',
+        text: 'Emprestimo deletado com sucesso',
+        icon: 'success',
+        confirmButtonText: 'Beleza!'
+        })
+    </script> <?php
+    unset($_SESSION['delStatus']);
+}
+
+if (isset($_SESSION['editStatus'])) {
+    ?>
+    <script>
+        Swal.fire({
+        title: 'Emprestimo editado!',
+        text: 'Emprestimo editado com sucesso',
+        icon: 'success',
+        confirmButtonText: 'Beleza!'
+        })
+    </script> <?php
+    unset($_SESSION['editStatus']);
+}
+?>

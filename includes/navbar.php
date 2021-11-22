@@ -23,6 +23,7 @@
       src="https://kit.fontawesome.com/d188baf7ab.js"
       crossorigin="anonymous"
     ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <!-- Navbar brand -->
@@ -40,6 +41,9 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item text-white">
           <a class="nav-link" href="./dash.php">Dashboard</a>
+        </li>
+        <li class="nav-item text-white">
+          <a class="nav-link" href="./relatorios.php">Relatórios</a>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -91,9 +95,6 @@
               <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair</a>
             </li>
           </ul>
-        </li>
-        <li class="nav-item text-white">
-          <a class="nav-link" href="#">Relatórios</a>
         </li>
       </ul>
     </nav>

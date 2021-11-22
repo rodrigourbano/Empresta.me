@@ -3,12 +3,12 @@ include('includes/verificaLogado.php');
 include('libs/start.php');
 include('includes/navbar.php');
 $dataAtual = date("Y-m-d");
-$lista = $database->select("emprestimos", "*",["status" => 0]);
+$lista = $database->select("emprestimos", "*", ["status" => 1]);
 ?>
 
 <div style="background-color: #EAEAEA; height: 1920px; margin-top: 0px;">
 <span>⠀</span>
-<h1 style="text-align: center; margin-bottom: 50px;">Lista de Empréstimos Pendentes</h1>
+<h1 style="text-align: center; margin-bottom: 50px;">Todos empréstimos realizados</h1>
     <div class="container">
         <div class="row">
             <div class="col text-center">
@@ -21,9 +21,9 @@ $lista = $database->select("emprestimos", "*",["status" => 0]);
             <thead>
                 <tr>
                     <th scope="col">Item emprestado</th>
-                    <th scope="col">Emprestado</th>
+                    <th scope="col">Quem pegou</th>
                     <th scope="col">Data Limite</th>
-                    <th scope="col">Ações</th>
+                    <th scope="col">Data de Devolução</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,10 +33,7 @@ $lista = $database->select("emprestimos", "*",["status" => 0]);
                     <th scope="row"><?=$l["objeto"]?></th>
                     <td><?=$l["nomeRecebe"]?></td>
                     <td><?=$l["dataLimite"]?></td>
-                    <td><a href="#" title="Fechar emprestimo" style="color: #FFFFFF; text-decoration: none !important;"><i class="far fa-check-circle">⠀</i></a>
-                        <a href="#" title="Deletar emprestimo" style="color: #FFFFFF; text-decoration: none !important;"><i class="far fa-times-circle">⠀</i></a>
-                        <a href="#" title="Editar emprestimo" style="color: #FFFFFF; text-decoration: none !important;"><i class="far fa-edit"></i></a>
-                    </td>
+                    <td><?=$l["dataDevolucao"]?></td>
                 </tr>
             <?php } ?>
             </tbody>
