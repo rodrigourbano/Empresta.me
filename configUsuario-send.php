@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('libs/start.php');
+include('includes/verificaLogado.php');
 
 if(isset($_POST["submit"])) {
     

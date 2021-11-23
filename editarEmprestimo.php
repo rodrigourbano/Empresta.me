@@ -2,6 +2,7 @@
 session_start();
 include('libs/start.php');
 include('includes/navbar.php');
+include('includes/verificaLogado.php');
 
 $idEmprestimo = $_GET['id'];
 $data = $database->select("emprestimos", "*", ["id" => $idEmprestimo]);

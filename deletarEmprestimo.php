@@ -1,5 +1,5 @@
 <?php
-
+include('includes/verificaLogado.php');
 session_start();
 $_SESSION['delStatus'] = "Sucesso!";
 include('libs/start.php');

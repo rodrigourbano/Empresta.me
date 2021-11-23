@@ -3,6 +3,7 @@
 session_start();
 $_SESSION['fnStatus'] = "Sucesso!";
 include('libs/start.php');
+include('includes/verificaLogado.php');
 
 $idEmprestimo = $_GET['id'];
 $status = 1;

@@ -1,5 +1,5 @@
 <?php
-
+include('includes/verificaLogado.php');
 include('libs/start.php');
 
 if(isset($_POST["submit"])) {

@@ -1,5 +1,6 @@
 <body>
   <?php 
+    include('includes/verificaLogado.php');
     include('includes/navbar.php');
     ?>
     <div class="cadastro-div text-white">
