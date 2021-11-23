@@ -7,7 +7,6 @@
     <title>Empresta.me</title>
 
     <link rel="stylesheet" href="./css/bootstrap.css" />
-    <script src="./js/bootstrapJS/bootstrap.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,300;1,700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <?php
       include('libs/start.php');
     ?>
@@ -92,7 +92,7 @@
               <a class="dropdown-item" href="./configUsuario.php"><i class="fas fa-user-cog"></i> Editar Perfil</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair</a>
+              <a class="dropdown-item" href="./doLogout.php?token=<?php echo md5(session_id()) ?>"><i class="fas fa-sign-out-alt"></i> Sair</a>
             </li>
           </ul>
         </li>
