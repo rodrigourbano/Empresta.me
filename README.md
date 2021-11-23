@@ -4,7 +4,7 @@ O projeto Empresta.me foi feito para a disciplina de Fundamentos de Programaçã
 
 <p align="center">
   <img align="center" src="https://minhabiblioteca.com.br/wp-content/uploads/2019/01/PUCPR.png" width="120" height="200"></img>
-  <img align="center" src="https://imgur.com/a/jDiaHfB"></img>
+  <img align="center" src="./img/Empresta.me_blank.png"></img>
 
 </p>
 <h2 align="left">Tecnologias utilizadas nesse projeto:</h3>
