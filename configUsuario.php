@@ -1,6 +1,7 @@
 <?php
-session_start();
+include('includes/verificaLogado.php');
 include('includes/navbar.php');
+include('includes/scripts.php');
 
 $userID = $_SESSION['uid'];
 $dadosUser = $database->select("users","*", ["id" => $userID]);
@@ -16,7 +17,7 @@ $dadosUser = $database->select("users","*", ["id" => $userID]);
               <label class="form-label" for="email">Email</label>
               <input type="text" id="email" name="email" class="form-control form-control-lg" value="<?=$dadosUser[0]['email']?>" disabled/>
               <label class="form-label" for="senha">Senha</label>
-              <input type="text" id="senha" name="senha" class="form-control form-control-lg" placeholder="Confirme sua senha" required/>
+              <input type="password" id="senha" name="senha" class="form-control form-control-lg" placeholder="Confirme sua senha" required/>
             <div class="text-center" style="margin-top: 45px">
                 <button type="submit" name="submit" class="btn green-outline-btn center">Atualizar dados</button>
             </div>  

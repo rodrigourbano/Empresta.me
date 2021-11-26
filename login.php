@@ -1,5 +1,6 @@
 <?php 
 include('libs/start.php');
+include('includes/scripts.php');
 session_start();
 if (isset($_POST['email']) || isset($_POST['password'])) {
 
@@ -84,9 +85,9 @@ if (isset($_POST['email']) || isset($_POST['password'])) {
                     </div>
                     <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
                   </form>
-                  <p class="small mb-5 pb-lg-2" style="margin-top: 20px">
+                  <!--<p class="small mb-5 pb-lg-2" style="margin-top: 20px">
                     <a class="text-white-50" href="#!">Esqueceu a senha?</a>
-                  </p>
+                  </p>-->
 
 
 

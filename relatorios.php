@@ -2,6 +2,8 @@
 include('includes/verificaLogado.php');
 include('libs/start.php');
 include('includes/navbar.php');
+include('includes/scripts.php');
+
 $dataAtual = date("Y-m-d");
 $lista = $database->select("emprestimos", "*", ["status" => 1]);
 ?>

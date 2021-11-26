@@ -2,6 +2,7 @@
   <?php 
   include('includes/verificaLogado.php');
   include('includes/navbar.php');
+  include('includes/scripts.php');
   ?>
   <div class="cadastro-div-md text-white">
     <span>⠀</span>

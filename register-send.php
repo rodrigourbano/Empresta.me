@@ -2,6 +2,7 @@
 
 include('libs/start.php');
 include('includes/headOnly.php');
+include('includes/scripts.php');
 
 if(isset($_POST["submit"])) {
     

@@ -2,6 +2,7 @@
 
 include('includes/verificaLogado.php');
 include('libs/start.php');
+include('includes/scripts.php');
 if(isset($_POST["submit"])) {
     
     $objeto = $_POST["objeto"];

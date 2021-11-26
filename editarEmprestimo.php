@@ -1,8 +1,8 @@
 <?php
-session_start();
+include('includes/verificaLogado.php');
 include('libs/start.php');
 include('includes/navbar.php');
-include('includes/verificaLogado.php');
+include('includes/scripts.php');
 
 $idEmprestimo = $_GET['id'];
 $data = $database->select("emprestimos", "*", ["id" => $idEmprestimo]);
@@ -12,7 +12,7 @@ $data = $database->select("emprestimos", "*", ["id" => $idEmprestimo]);
     <div class="cadastro-div-lg text-white" style="height: 658px !important">
       <span>⠀</span>
       <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 texto-cadastro">
-        Cadastrar Empréstimo
+        Editar Empréstimo
       </h3>
       <form action="editarEmprestimo-enviar.php" method="post">
         <div class="row" style="margin-left: 10px; margin-right: 10px">

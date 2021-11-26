@@ -21,6 +21,7 @@
     ></script>
     <?php
       include('libs/start.php');
+      include('includes/scripts.php');
     ?>
     <title>Empresta.Me</title>
   </head>

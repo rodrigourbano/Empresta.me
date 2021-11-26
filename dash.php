@@ -2,6 +2,7 @@
 include('includes/verificaLogado.php');
 include('libs/start.php');
 include('includes/navbar.php');
+include('includes/scripts.php');
 $dataAtual = date("Y-m-d");
 $lista = $database->select("emprestimos", "*", ["status" => 0]);
 ?>
@@ -40,7 +41,7 @@ $lista = $database->select("emprestimos", "*", ["status" => 0]);
                         
                         if ($dataAtual > $l["dataLimite"]) {
                             ?>
-                            <span id="piscar" style="color: red;">⠀<i class="fas fa-exclamation-triangle"></i></span> <?php
+                            <span id="piscar" style="color: red;">⠀<i title="ATRASADO!" class="fas fa-exclamation-triangle"></i></span> <?php
                         }
                         ?>
                     </td>
